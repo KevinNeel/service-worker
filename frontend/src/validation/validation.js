@@ -56,13 +56,3 @@ export const ageValidation = (age, key, setError) => {
 
 }
 
-export const checkPassword = (password, key, setError) => {
-    if (password.length <= 6) {
-        setError((prev) => ({ ...prev, [key]: "Password must contain more than 6 characters" }))
-        return false
-    } else {
-        setError((prev) => ({ ...prev, [key]: "" }))
-        return true
-    }
-}
-
